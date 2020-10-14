@@ -1,0 +1,33 @@
+.footer {
+  margin: 2rem;
+  padding: 1em;
+}
+
+.footer:not(:hover) {
+  a > {
+    text-decoration: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s;
+  }
+
+  span > {
+    transition: opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s;
+  }
+}
+
+.footer:hover {
+  a > {
+    margin-left: 3rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 96px;
+    transition: font-size .25s, margin .25s, padding .25s, opacity .5s .25s;
+  }
+
+  span > {
+    height: 0;
+    font-size: 0;
+  }
+}

@@ -1,0 +1,26 @@
+.col-half {
+  float: left;
+  padding: 1rem;
+  width: calc(100% / 2)
+}
+
+.col {
+  float: left;
+  padding: 1rem;
+  width: calc(100% / 3.5)
+}
+
+.col-small {
+  float: left;
+  width: calc(100% / 6);
+}
+
+@media screen and (max-width: 690px) {
+  .col {
+    width: 100%;
+  }
+
+  .col-small {
+    width: calc(100% / 2);
+  }
+}

@@ -1,0 +1,54 @@
+.interests {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  b {
+    font-size: 1.2rem;
+  }
+}
+
+.interests .list {
+  list-style-type: none;
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  b {
+    text-align: center;
+  }
+}
+
+.interests:not(:hover) .list {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  transition: opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s;
+}
+
+.interests:hover .list {
+  b {
+    height: 0;
+    font-size: 0;
+  }
+
+  svg > {
+    font-size: 32px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  transition: font-size .25s, margin .25s, padding .25s, opacity .5s .25s;
+}
+
+.interests:hover b {
+  font-size: 0;
+}

@@ -1,0 +1,85 @@
+@import "./variables";
+
+header {
+  width: 100%;
+  background: @bg-main;
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+}
+
+.navigation-bar {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: @bg-main;
+  border: 1px solid @bg-main-dark;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 1em;
+    }
+  }
+
+  h1 {
+    color: white;
+    margin: 0 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .item {
+    color: white;
+    border-bottom: @interactive-5-hex 2px solid;
+    button {
+      border: 0;
+      background: inherit;
+      font-size: inherit;
+    }
+  }
+}
+
+.item:not(:hover) {
+  a > {
+    transition: color .5s;
+  }
+}
+
+.item:hover {
+  button > {
+    color: @interactive-5-hex;
+    transition: color .5s;
+  }
+}
+
+.navigation-bar:not(:hover) {
+  h1 {
+    color: white;
+    opacity: 1;
+    transition: opacity .25s, color .5s;
+  }
+}
+
+.navigation-bar:hover {
+  h1 {
+    opacity: 0.8;
+    transition: opacity .25s, color .5s;
+  }
+}
+
+.content {
+  min-height: 1200px;
+}
